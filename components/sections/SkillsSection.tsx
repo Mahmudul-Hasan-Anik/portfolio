@@ -74,7 +74,7 @@ function AnimatedBar({ level, inView, color }: { level: number; inView: boolean;
   );
 }
 
-export default function Skills() {
+export default function SkillsSection() {
   const { ref, inView } = useInView();
 
   return (

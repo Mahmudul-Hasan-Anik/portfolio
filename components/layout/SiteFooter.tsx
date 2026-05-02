@@ -18,7 +18,7 @@ const SOCIAL_LINKS = [
   { href: 'mailto:mahmudul@example.com', icon: <Mail className="w-4 h-4" />, label: 'Email' },
 ];
 
-export default function Footer() {
+export default function SiteFooter() {
   const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const scrollTo = (href: string) => {

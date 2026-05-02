@@ -70,7 +70,7 @@ const REASONS = [
   },
 ];
 
-export default function WhyHireMe() {
+export default function WhyHireMeSection() {
   const { ref, inView } = useInView();
 
   return (

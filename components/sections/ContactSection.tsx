@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useInView } from '@/hooks/useInView';
-import { isSupabaseConfigured, supabase } from '@/lib/supabase';
+import { isSupabaseConfigured, supabase } from '@/lib/supabaseClient';
 import { Send, Mail, MessageCircle, Linkedin, Github, Calendar, CircleCheck as CheckCircle, CircleAlert as AlertCircle, Loader as Loader2 } from 'lucide-react';
 
 const CONTACT_LINKS = [
@@ -46,7 +46,7 @@ const CONTACT_LINKS = [
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
-export default function Contact() {
+export default function ContactSection() {
   const { ref, inView } = useInView();
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState<Status>('idle');

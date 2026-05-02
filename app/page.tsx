@@ -1,29 +1,29 @@
-import Navbar from '@/components/portfolio/Navbar';
-import Hero from '@/components/portfolio/Hero';
-import About from '@/components/portfolio/About';
-import Skills from '@/components/portfolio/Skills';
-import Products from '@/components/portfolio/Products';
-import Experience from '@/components/portfolio/Experience';
-import Github from '@/components/portfolio/Github';
-import WhyHireMe from '@/components/portfolio/WhyHireMe';
-import Testimonials from '@/components/portfolio/Testimonials';
-import Contact from '@/components/portfolio/Contact';
-import Footer from '@/components/portfolio/Footer';
+import SiteHeader from '@/components/layout/SiteHeader';
+import SiteFooter from '@/components/layout/SiteFooter';
+import HeroSection from '@/components/sections/HeroSection';
+import AboutSection from '@/components/sections/AboutSection';
+import SkillsSection from '@/components/sections/SkillsSection';
+import FeaturedWorkSection from '@/components/sections/FeaturedWorkSection';
+import ExperienceSection from '@/components/sections/ExperienceSection';
+import GitHubProjectsSection from '@/components/sections/GitHubProjectsSection';
+import WhyHireMeSection from '@/components/sections/WhyHireMeSection';
+import TestimonialsSection from '@/components/sections/TestimonialsSection';
+import ContactSection from '@/components/sections/ContactSection';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Products />
-      <Experience />
-      <Github />
-      <WhyHireMe />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      <SiteHeader />
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <FeaturedWorkSection />
+      <ExperienceSection />
+      <GitHubProjectsSection />
+      <WhyHireMeSection />
+      <TestimonialsSection />
+      <ContactSection />
+      <SiteFooter />
     </main>
   );
 }

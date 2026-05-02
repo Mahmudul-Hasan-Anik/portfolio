@@ -111,7 +111,7 @@ const PRODUCTS: Product[] = [
   },
 ];
 
-export default function Products() {
+export default function FeaturedWorkSection() {
   const { ref, inView } = useInView();
   const [expanded, setExpanded] = useState<string | null>(null);
 

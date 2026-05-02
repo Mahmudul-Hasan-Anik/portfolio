@@ -36,7 +36,7 @@ const LANGUAGE_COLORS: Record<string, string> = {
   default: 'bg-white/10 text-muted-foreground border-white/20',
 };
 
-export default function GithubProjects() {
+export default function GitHubProjectsSection() {
   const { ref, inView } = useInView();
   const [data, setData] = useState<GithubData | null>(null);
   const [loading, setLoading] = useState(true);

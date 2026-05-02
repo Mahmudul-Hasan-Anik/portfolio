@@ -28,7 +28,7 @@ const TITLES = [
   'React & Next.js Dev',
 ];
 
-export default function Hero() {
+export default function HeroSection() {
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayed, setDisplayed] = useState('');
   const [typing, setTyping] = useState(true);

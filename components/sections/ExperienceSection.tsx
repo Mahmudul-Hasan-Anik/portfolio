@@ -76,7 +76,7 @@ const TIMELINE: TimelineItem[] = [
   },
 ];
 
-export default function Experience() {
+export default function ExperienceSection() {
   const { ref, inView } = useInView();
 
   return (

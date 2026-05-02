@@ -12,7 +12,7 @@ const NAV_LINKS = [
   { href: '#contact', label: 'Contact' },
 ];
 
-export default function Navbar() {
+export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');

@@ -10,7 +10,7 @@ const HIGHLIGHTS = [
   { icon: <TrendingUp className="w-5 h-5" />, title: 'Business Minded', desc: 'I build interfaces that drive engagement, conversions, and business growth.' },
 ];
 
-export default function About() {
+export default function AboutSection() {
   const { ref, inView } = useInView();
 
   return (

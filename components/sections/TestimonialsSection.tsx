@@ -38,7 +38,7 @@ const TESTIMONIALS = [
   },
 ];
 
-export default function Testimonials() {
+export default function TestimonialsSection() {
   const { ref, inView } = useInView();
 
   return (

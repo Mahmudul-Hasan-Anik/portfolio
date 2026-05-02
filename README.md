@@ -30,24 +30,26 @@ app/
   page.tsx        Home page section order
   globals.css     Tailwind styles and custom utility classes
 
-components/portfolio/
-  Navbar.tsx
-  Hero.tsx
-  About.tsx
-  Skills.tsx
-  Products.tsx
-  Experience.tsx
-  Github.tsx
-  WhyHireMe.tsx
-  Testimonials.tsx
-  Contact.tsx
-  Footer.tsx
+components/layout/
+  SiteHeader.tsx
+  SiteFooter.tsx
+
+components/sections/
+  HeroSection.tsx
+  AboutSection.tsx
+  SkillsSection.tsx
+  FeaturedWorkSection.tsx
+  ExperienceSection.tsx
+  GitHubProjectsSection.tsx
+  WhyHireMeSection.tsx
+  TestimonialsSection.tsx
+  ContactSection.tsx
 
 hooks/
   useInView.ts    Scroll reveal helper
 
 lib/
-  supabase.ts     Supabase browser client
+  supabaseClient.ts  Supabase browser client
 
 supabase/
   migrations/     Database table setup
