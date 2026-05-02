@@ -1,15 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
-  title: 'Mahmudul Hasan — Frontend Engineer & Product Developer',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+  title: 'Mahmudul Hasan - Frontend Engineer & Product Developer',
   description:
     'Frontend developer with 3+ years building modern web interfaces, WordPress products, Gutenberg systems, dashboards, and scalable SaaS tools. Available for remote roles and freelance work.',
   keywords: [
@@ -30,14 +24,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    title: 'Mahmudul Hasan — Frontend Engineer & Product Developer',
+    title: 'Mahmudul Hasan - Frontend Engineer & Product Developer',
     description:
       'Frontend developer with 3+ years building modern web interfaces, WordPress products, and scalable SaaS tools. Available for remote roles.',
     siteName: 'Mahmudul Hasan Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mahmudul Hasan — Frontend Engineer & Product Developer',
+    title: 'Mahmudul Hasan - Frontend Engineer & Product Developer',
     description:
       'Frontend developer with 3+ years building modern web interfaces, WordPress products, and scalable SaaS tools.',
   },
@@ -55,7 +49,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased`}>{children}</body>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }
