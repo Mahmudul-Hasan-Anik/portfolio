@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useInView } from '@/hooks/useInView';
-import { supabase } from '@/lib/supabase';
+import { isSupabaseConfigured, supabase } from '@/lib/supabase';
 import { Send, Mail, MessageCircle, Linkedin, Github, Calendar, CircleCheck as CheckCircle, CircleAlert as AlertCircle, Loader as Loader2 } from 'lucide-react';
 
 const CONTACT_LINKS = [
@@ -65,6 +65,12 @@ export default function Contact() {
     }
     setStatus('loading');
     setErrorMsg('');
+
+    if (!isSupabaseConfigured || !supabase) {
+      setStatus('error');
+      setErrorMsg('Contact form is not configured locally. Please email me directly.');
+      return;
+    }
 
     const { error } = await supabase.from('contact_submissions').insert({
       name: form.name.trim(),
