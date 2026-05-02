@@ -30,8 +30,7 @@ const SKILL_GROUPS: SkillGroup[] = [
       { name: 'Gutenberg Blocks', level: 90 },
       { name: 'Custom Plugins', level: 88 },
       { name: 'WooCommerce', level: 82 },
-      { name: 'Elementor Addons', level: 85 },
-      { name: 'Theme Customization', level: 90 },
+      { name: 'Elementor Addons', level: 85 }
     ],
   },
   {
@@ -51,9 +50,9 @@ const SKILL_GROUPS: SkillGroup[] = [
 ];
 
 const TAGS = [
-  'React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML5', 'CSS3',
-  'WordPress', 'Gutenberg', 'WooCommerce', 'Elementor', 'Node.js', 'REST APIs',
-  'Git', 'Figma', 'Webpack', 'Vite', 'SCSS', 'PHP', 'MySQL',
+  'React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML5', 'CSS3', 'PHP',
+  'WordPress', 'Gutenberg', 'WooCommerce', 'Elementor', 'REST APIs',
+  'Git', 'Figma', 'Webpack', 'SCSS'
 ];
 
 function AnimatedBar({ level, inView, color }: { level: number; inView: boolean; color: string }) {
@@ -124,8 +123,8 @@ export default function SkillsSection() {
                         gi === 0
                           ? 'from-blue-500 to-cyan-400'
                           : gi === 1
-                          ? 'from-sky-500 to-blue-400'
-                          : 'from-cyan-500 to-teal-400'
+                            ? 'from-sky-500 to-blue-400'
+                            : 'from-cyan-500 to-teal-400'
                       }
                     />
                   </div>
