@@ -97,8 +97,8 @@ export default function ExperienceSection() {
   const { ref, inView } = useInView();
 
   return (
-    <section id="experience" className="py-24 lg:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
+    <section id="experience" className="py-8 lg:py-16 relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-cyan-500/4 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-blue-500/4 rounded-full blur-3xl" />
       </div>
@@ -122,7 +122,10 @@ export default function ExperienceSection() {
           className={`relative max-w-3xl mx-auto transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
         >
-          <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500/50 via-cyan-500/30 to-emerald-500/30 hidden sm:block" />
+          <div
+            className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500/50 via-cyan-500/30 to-emerald-500/30 hidden sm:block"
+            aria-hidden="true"
+          />
 
           <div className="space-y-8">
             {TIMELINE.map((item, i) => (
@@ -130,10 +133,10 @@ export default function ExperienceSection() {
                 <div className="relative shrink-0 w-12 h-12 hidden sm:flex">
                   <div
                     className={`w-12 h-12 rounded-xl flex items-center justify-center border transition-all duration-200 group-hover:scale-110 ${item.current
-                        ? 'bg-blue-500/20 border-blue-500/40 text-blue-400 shadow-lg shadow-blue-500/10'
-                        : item.future
-                          ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400 shadow-lg shadow-emerald-500/10'
-                          : 'bg-white/5 border-white/10 text-muted-foreground'
+                      ? 'bg-blue-500/20 border-blue-500/40 text-blue-400 shadow-lg shadow-blue-500/10'
+                      : item.future
+                        ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400 shadow-lg shadow-emerald-500/10'
+                        : 'bg-white/5 border-white/10 text-muted-foreground'
                       }`}
                   >
                     <Briefcase className="w-4 h-4" />
@@ -142,10 +145,10 @@ export default function ExperienceSection() {
 
                 <div
                   className={`flex-1 rounded-2xl p-5 sm:p-6 border transition-all duration-200 hover:shadow-xl group-hover:-translate-y-0.5 ${item.current
-                      ? 'bg-blue-500/8 border-blue-500/25 hover:bg-blue-500/12'
-                      : item.future
-                        ? 'bg-emerald-500/5 border-emerald-500/20 hover:bg-emerald-500/10'
-                        : 'glass border-white/8 hover:bg-white/5'
+                    ? 'bg-blue-500/8 border-blue-500/25 hover:bg-blue-500/12'
+                    : item.future
+                      ? 'bg-emerald-500/5 border-emerald-500/20 hover:bg-emerald-500/10'
+                      : 'glass border-white/8 hover:bg-white/5'
                     }`}
                   style={{
                     opacity: inView ? 1 : 0,

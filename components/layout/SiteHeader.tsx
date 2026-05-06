@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Download, Sun, Moon, Code as Code2 } from 'lucide-react';
+import { Menu, X, Download, Code as Code2 } from 'lucide-react';
+import { LogoMark } from '@/components/LogoMark';
 
 const NAV_LINKS = [
   { href: '#home', label: 'Home' },
@@ -16,7 +17,6 @@ export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const [dark, setDark] = useState(true);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -37,14 +37,6 @@ export default function SiteHeader() {
     return () => observer.disconnect();
   }, []);
 
-  const toggleTheme = () => {
-    setDark((d) => {
-      const next = !d;
-      document.documentElement.classList.toggle('dark', next);
-      return next;
-    });
-  };
-
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
     const target = document.querySelector(href);
@@ -53,11 +45,10 @@ export default function SiteHeader() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-background/80 backdrop-blur-xl border-b border-border/60 shadow-lg shadow-black/10'
-          : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? 'bg-background/80 backdrop-blur-xl border-b border-border/60 shadow-lg shadow-black/10'
+        : 'bg-transparent'
+        }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
@@ -66,8 +57,8 @@ export default function SiteHeader() {
           onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}
           className="flex items-center gap-2 group"
         >
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
-            <Code2 className="w-4 h-4 text-white" />
+          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform">
+            <LogoMark className="w-6 h-6" />
           </div>
           <span className="font-bold text-foreground tracking-tight">
             Mahmudul<span className="text-blue-400">.</span>
@@ -80,11 +71,10 @@ export default function SiteHeader() {
             <li key={href}>
               <button
                 onClick={() => handleNavClick(href)}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  activeSection === href.slice(1)
-                    ? 'text-blue-400 bg-blue-500/10'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-white/5'
-                }`}
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${activeSection === href.slice(1)
+                  ? 'text-blue-400 bg-blue-500/10'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-white/5'
+                  }`}
               >
                 {label}
               </button>
@@ -94,15 +84,8 @@ export default function SiteHeader() {
 
         {/* Right Actions */}
         <div className="hidden md:flex items-center gap-2">
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-white/5 transition-all"
-            aria-label="Toggle theme"
-          >
-            {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-          </button>
           <a
-            href="/resume.pdf"
+            href="/pdf/Mahmudul-hasan-anik.pdf"
             download
             className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium transition-all duration-200 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 active:scale-95"
           >
@@ -113,13 +96,6 @@ export default function SiteHeader() {
 
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center gap-2">
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-lg text-muted-foreground hover:text-foreground transition-all"
-            aria-label="Toggle theme"
-          >
-            {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-          </button>
           <button
             onClick={() => setMobileOpen((o) => !o)}
             className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-white/5 transition-all"
@@ -132,26 +108,24 @@ export default function SiteHeader() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-300 ${mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
       >
         <div className="bg-background/95 backdrop-blur-xl border-b border-border/60 px-4 pb-4 pt-2 space-y-1">
           {NAV_LINKS.map(({ href, label }) => (
             <button
               key={href}
               onClick={() => handleNavClick(href)}
-              className={`w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
-                activeSection === href.slice(1)
-                  ? 'text-blue-400 bg-blue-500/10'
-                  : 'text-muted-foreground hover:text-foreground hover:bg-white/5'
-              }`}
+              className={`w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${activeSection === href.slice(1)
+                ? 'text-blue-400 bg-blue-500/10'
+                : 'text-muted-foreground hover:text-foreground hover:bg-white/5'
+                }`}
             >
               {label}
             </button>
           ))}
           <a
-            href="/resume.pdf"
+            href="/pdf/Mahmudul-hasan-anik.pdf"
             download
             className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-500 text-white text-sm font-medium mt-2"
           >

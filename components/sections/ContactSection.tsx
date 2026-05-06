@@ -9,8 +9,8 @@ const CONTACT_LINKS = [
   {
     icon: <Mail className="w-5 h-5" />,
     label: 'Email',
-    value: 'mahmudul@example.com',
-    href: 'mailto:mahmudul@example.com',
+    value: 'Hasan22dev@gmail.com',
+    href: 'mailto:Hasan22dev@gmail.com',
     color: 'text-blue-400',
     border: 'border-blue-500/20',
     bg: 'hover:bg-blue-500/5',
@@ -18,8 +18,8 @@ const CONTACT_LINKS = [
   {
     icon: <MessageCircle className="w-5 h-5" />,
     label: 'WhatsApp',
-    value: '+880 1700 000000',
-    href: 'https://wa.me/8801700000000',
+    value: '+880 1716792397',
+    href: 'https://wa.me/8801716792397',
     color: 'text-green-400',
     border: 'border-green-500/20',
     bg: 'hover:bg-green-500/5',
@@ -27,8 +27,8 @@ const CONTACT_LINKS = [
   {
     icon: <Linkedin className="w-5 h-5" />,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/mahmudul',
-    href: 'https://linkedin.com/in/mahmudul',
+    value: 'linkedin.com/in/anik-dev',
+    href: 'https://linkedin.com/in/anik-dev',
     color: 'text-sky-400',
     border: 'border-sky-500/20',
     bg: 'hover:bg-sky-500/5',
@@ -36,8 +36,8 @@ const CONTACT_LINKS = [
   {
     icon: <Github className="w-5 h-5" />,
     label: 'GitHub',
-    value: 'github.com/mahmudul',
-    href: 'https://github.com/mahmudul',
+    value: 'github.com/mahmudul-hasan-anik',
+    href: 'https://github.com/mahmudul-hasan-anik',
     color: 'text-white',
     border: 'border-white/15',
     bg: 'hover:bg-white/5',
@@ -89,7 +89,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32 relative overflow-hidden">
+    <section id="contact" className="py-8 lg:py-16 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-blue-500/6 rounded-full blur-3xl" />
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-cyan-500/4 rounded-full blur-3xl" />
@@ -112,9 +112,8 @@ export default function ContactSection() {
 
         <div
           ref={ref}
-          className={`grid lg:grid-cols-2 gap-12 transition-all duration-700 ${
-            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+          className={`grid lg:grid-cols-2 gap-12 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           {/* Left: contact info */}
           <div>
@@ -162,7 +161,7 @@ export default function ContactSection() {
           </div>
 
           {/* Right: contact form */}
-          <div className="rounded-2xl glass border border-white/8 p-6 sm:p-8">
+          <div className="rounded-2xl glass border border-white/8 p-6 sm:p-8 mt-[110px]">
             <h3 className="text-lg font-bold text-foreground mb-6">Send a message</h3>
 
             {status === 'success' ? (

@@ -151,7 +151,7 @@ export default function HeroSection() {
               View My Work
             </button>
             <a
-              href="/resume.pdf"
+              href="/pdf/Mahmudul-hasan-anik.pdf"
               download
               className="group flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-foreground font-semibold transition-all duration-200 hover:scale-105 active:scale-95 w-full sm:w-auto justify-center"
             >

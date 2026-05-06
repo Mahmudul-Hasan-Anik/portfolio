@@ -74,7 +74,7 @@ export default function WhyHireMeSection() {
   const { ref, inView } = useInView();
 
   return (
-    <section className="py-24 lg:py-32 relative overflow-hidden">
+    <section className="py-8 lg:py-16 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
       </div>

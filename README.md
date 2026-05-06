@@ -20,7 +20,7 @@ NEXT_PUBLIC_SUPABASE_URL=https://your-project-ref.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
 ```
 
-The site still runs without these values. Only the contact form submission is disabled.
+The site still runs without the Supabase values. Only the contact form submission is disabled.
 
 ## Project structure
 
@@ -53,7 +53,6 @@ lib/
 
 supabase/
   migrations/     Database table setup
-  functions/      Optional Supabase Edge Function
 ```
 
 ## Useful commands

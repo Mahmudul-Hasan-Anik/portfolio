@@ -14,7 +14,7 @@ export default function AboutSection() {
   const { ref, inView } = useInView();
 
   return (
-    <section id="about" className="py-24 lg:py-32 relative overflow-hidden">
+    <section id="about" className="py-8 lg:py-16 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 right-0 w-72 h-72 bg-cyan-500/5 rounded-full blur-3xl" />
       </div>
@@ -33,9 +33,8 @@ export default function AboutSection() {
 
         <div
           ref={ref}
-          className={`grid lg:grid-cols-2 gap-16 items-center transition-all duration-700 ${
-            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+          className={`grid lg:grid-cols-2 gap-16 items-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           {/* Left: image + badges */}
           <div className="relative flex justify-center">
@@ -45,7 +44,7 @@ export default function AboutSection() {
               {/* Profile box */}
               <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 glass">
                 <img
-                  src="https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  src="/assets/img/IMG_2823.jpeg"
                   alt="Mahmudul Hasan — Frontend Developer"
                   className="w-full h-full object-cover"
                   loading="lazy"

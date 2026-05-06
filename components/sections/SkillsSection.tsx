@@ -77,7 +77,7 @@ export default function SkillsSection() {
   const { ref, inView } = useInView();
 
   return (
-    <section id="skills" className="py-24 lg:py-32 relative overflow-hidden">
+    <section id="skills" className="py-8 lg:py-16 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-1/3 left-0 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl" />
       </div>

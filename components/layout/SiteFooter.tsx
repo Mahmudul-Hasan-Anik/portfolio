@@ -1,6 +1,7 @@
 'use client';
 
-import { Github, Linkedin, Twitter, Mail, Code as Code2, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, Code as Code2, ArrowUp, Facebook } from 'lucide-react';
+import { LogoMark } from '@/components/LogoMark';
 
 const QUICK_LINKS = [
   { href: '#home', label: 'Home' },
@@ -12,10 +13,10 @@ const QUICK_LINKS = [
 ];
 
 const SOCIAL_LINKS = [
-  { href: 'https://github.com/mahmudul', icon: <Github className="w-4 h-4" />, label: 'GitHub' },
-  { href: 'https://linkedin.com/in/mahmudul', icon: <Linkedin className="w-4 h-4" />, label: 'LinkedIn' },
-  { href: 'https://twitter.com/mahmudul', icon: <Twitter className="w-4 h-4" />, label: 'Twitter' },
-  { href: 'mailto:mahmudul@example.com', icon: <Mail className="w-4 h-4" />, label: 'Email' },
+  { href: 'https://github.com/Mahmudul-Hasan-Anik', icon: <Github className="w-4 h-4" />, label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/anik-dev/', icon: <Linkedin className="w-4 h-4" />, label: 'LinkedIn' },
+  { href: 'https://www.facebook.com/Anik13m/', icon: <Facebook className="w-4 h-4" />, label: 'Facebook' },
+  { href: 'mailto:Hasan22dev@gmail.com', icon: <Mail className="w-4 h-4" />, label: 'Email' },
 ];
 
 export default function SiteFooter() {
@@ -32,8 +33,8 @@ export default function SiteFooter() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/30">
-                <Code2 className="w-4 h-4 text-white" />
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                <LogoMark className="w-6 h-6" />
               </div>
               <span className="font-bold text-foreground tracking-tight text-lg">
                 Mahmudul<span className="text-blue-400">.</span>
@@ -93,11 +94,11 @@ export default function SiteFooter() {
               </div>
             </div>
             <a
-              href="mailto:mahmudul@example.com"
+              href="mailto:Hasan22dev@gmail.com"
               className="inline-flex items-center gap-2 mt-5 px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium hover:bg-blue-500/20 transition-all"
             >
               <Mail className="w-3.5 h-3.5" />
-              mahmudul@example.com
+              Hasan22dev@gmail.com
             </a>
           </div>
         </div>
