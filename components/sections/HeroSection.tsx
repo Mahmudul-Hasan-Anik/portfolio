@@ -16,7 +16,7 @@ const TECH_BADGES = [
 
 const STATS = [
   { value: '3+', label: 'Years Experience', icon: <Zap className="w-4 h-4" /> },
-  { value: '5+', label: 'Real Products', icon: <Layers className="w-4 h-4" /> },
+  { value: '10+', label: 'Real Products', icon: <Layers className="w-4 h-4" /> },
   { value: '100%', label: 'Responsive UI', icon: <Globe className="w-4 h-4" /> },
   { value: 'SaaS', label: 'Product Mindset', icon: <Sparkles className="w-4 h-4" /> },
 ];
