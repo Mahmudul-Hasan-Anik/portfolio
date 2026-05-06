@@ -82,11 +82,11 @@ export default function SiteFooter() {
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                Open to remote work
+                Based in Bangladesh
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <span className="w-2 h-2 rounded-full bg-blue-400" />
-                Available for freelance
+                Currently at Roxnor
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <span className="w-2 h-2 rounded-full bg-cyan-400" />

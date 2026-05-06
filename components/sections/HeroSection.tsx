@@ -105,10 +105,10 @@ export default function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-32">
         <div className="max-w-4xl mx-auto text-center">
 
-          {/* Available badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-8 animate-fade-up">
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            Available for remote work & freelance
+          {/* Employment status badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8 animate-fade-up">
+            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            Currently working at Roxnor
           </div>
 
           {/* Name */}

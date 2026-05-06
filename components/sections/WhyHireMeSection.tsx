@@ -7,7 +7,7 @@ const REASONS = [
   {
     icon: <PackageCheck className="w-5 h-5" />,
     title: 'Real Product Experience',
-    desc: 'Contributed to 5+ commercial WordPress products with thousands of active users — not just side projects.',
+    desc: 'Contributed to 10+ commercial WordPress products with thousands of active users — not just side projects.',
     color: 'text-blue-400',
     bg: 'from-blue-500/12 to-blue-500/4',
     border: 'border-blue-500/20',

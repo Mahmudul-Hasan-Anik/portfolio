@@ -106,7 +106,7 @@ export default function ContactSection() {
             {"Let's"} build something <span className="text-gradient">great together</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Open to remote roles, freelance projects, and meaningful collaborations. Drop me a message.
+            Currently working at Roxnor. Open to meaningful collaborations and future opportunities.
           </p>
         </div>
 
@@ -118,11 +118,11 @@ export default function ContactSection() {
           {/* Left: contact info */}
           <div>
             <h3 className="text-xl font-bold text-foreground mb-2">
-              Available for opportunities
+              Open to discussions
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed mb-8">
-              Whether you are looking for a frontend engineer to join your team, need help building
-              a product, or want to discuss a freelance project — I am ready to talk.
+              Whether you want to discuss potential collaborations, future opportunities, or have questions
+              about my work — I am happy to connect and share insights.
             </p>
 
             <div className="space-y-3 mb-10">

@@ -5,7 +5,7 @@ import { MapPin, Calendar, Briefcase, Target, Code as Code2, Rocket, Users, Tren
 
 const HIGHLIGHTS = [
   { icon: <Code2 className="w-5 h-5" />, title: 'Deep Frontend Expertise', desc: 'Proficient in React, Next.js, TypeScript, and the full modern frontend toolchain.' },
-  { icon: <Rocket className="w-5 h-5" />, title: 'Real Product Experience', desc: 'Contributed to 5+ commercial WordPress products with active user bases.' },
+  { icon: <Rocket className="w-5 h-5" />, title: 'Real Product Experience', desc: 'Contributed to 10+ commercial WordPress products with active user bases.' },
   { icon: <Users className="w-5 h-5" />, title: 'User-Centered Thinking', desc: 'I approach every feature from the user\'s perspective, not just the code.' },
   { icon: <TrendingUp className="w-5 h-5" />, title: 'Business Minded', desc: 'I build interfaces that drive engagement, conversions, and business growth.' },
 ];
@@ -53,9 +53,9 @@ export default function AboutSection() {
               </div>
 
               {/* Floating tag badges */}
-              <div className="absolute -top-4 -right-4 glass rounded-xl px-3 py-2 border border-white/10 text-xs font-semibold text-green-400 flex items-center gap-1.5 animate-float">
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                Open to Work
+              <div className="absolute -top-4 -right-4 glass rounded-xl px-3 py-2 border border-white/10 text-xs font-semibold text-blue-400 flex items-center gap-1.5 animate-float">
+                <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+                Currently at Roxnor
               </div>
               <div className="absolute -bottom-4 -left-4 glass rounded-xl px-3 py-2 border border-white/10 text-xs font-semibold text-blue-400 animate-float-delayed flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5" />
@@ -71,7 +71,7 @@ export default function AboutSection() {
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 glass rounded-lg border border-white/10 text-xs text-muted-foreground">
                 <Briefcase className="w-3 h-3 text-cyan-400" />
-                5+ Products
+                10+ Products
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 glass rounded-lg border border-white/10 text-xs text-muted-foreground">
                 <Target className="w-3 h-3 text-green-400" />

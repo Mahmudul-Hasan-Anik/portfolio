@@ -4,6 +4,7 @@ import { useInView } from '@/hooks/useInView';
 import { Github, ExternalLink, Code as Code2, Layers, Table2 } from 'lucide-react';
 
 const GITHUB_PROFILE_URL = 'https://github.com/Mahmudul-Hasan-Anik';
+const ROXNOR_GITHUB_URL = 'https://github.com/mhasan-xs';
 
 const TABLEKIT_TECH = ['React', 'PHP', 'Gutenberg'];
 
@@ -82,21 +83,44 @@ export default function GitHubProjectsSection() {
             <div>
               <Github className="w-9 h-9 text-purple-400 mb-5" />
               <h3 className="text-xl font-bold text-foreground mb-3">Explore My GitHub</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Visit my GitHub profile to see repositories, experiments, and ongoing project updates.
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                Visit my GitHub profiles to see repositories, experiments, and ongoing project updates.
               </p>
-            </div>
 
-            <a
-              href={GITHUB_PROFILE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-purple-500/15 border border-purple-500/30 text-purple-400 hover:text-purple-300 hover:bg-purple-500/20 text-sm font-semibold transition-all duration-200 hover:scale-105"
-            >
-              <Github className="w-4 h-4" />
-              View GitHub
-              <ExternalLink className="w-4 h-4" />
-            </a>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/10">
+                  <div>
+                    <p className="text-sm font-medium text-foreground">Personal</p>
+                    <p className="text-xs text-muted-foreground">github.com/mahmudul-hasan-anik</p>
+                  </div>
+                  <a
+                    href={GITHUB_PROFILE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md bg-purple-500/15 border border-purple-500/30 text-purple-400 hover:text-purple-300 hover:bg-purple-500/20 text-xs font-medium transition-all duration-200"
+                  >
+                    <Github className="w-3 h-3" />
+                    View
+                  </a>
+                </div>
+
+                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/10">
+                  <div>
+                    <p className="text-sm font-medium text-foreground">Roxnor</p>
+                    <p className="text-xs text-muted-foreground">github.com/mhasan-xs</p>
+                  </div>
+                  <a
+                    href={ROXNOR_GITHUB_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md bg-blue-500/15 border border-blue-500/30 text-blue-400 hover:text-blue-300 hover:bg-blue-500/20 text-xs font-medium transition-all duration-200"
+                  >
+                    <Github className="w-3 h-3" />
+                    View
+                  </a>
+                </div>
+              </div>
+            </div>
           </aside>
         </div>
       </div>

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   title: 'Mahmudul Hasan - Frontend Engineer & Product Developer',
   description:
-    'Frontend developer with 3+ years building modern web interfaces, WordPress products, Gutenberg systems, dashboards, and scalable SaaS tools. Available for remote roles and freelance work.',
+    'Frontend developer with 3+ years building modern web interfaces, WordPress products, Gutenberg systems, dashboards, and scalable SaaS tools. Currently working at Roxnor.',
   keywords: [
     'Frontend Developer',
     'React Developer',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     title: 'Mahmudul Hasan - Frontend Engineer & Product Developer',
     description:
-      'Frontend developer with 3+ years building modern web interfaces, WordPress products, and scalable SaaS tools. Available for remote roles.',
+      'Frontend developer with 3+ years building modern web interfaces, WordPress products, and scalable SaaS tools. Currently working at Roxnor.',
     siteName: 'Mahmudul Hasan Portfolio',
   },
   twitter: {
