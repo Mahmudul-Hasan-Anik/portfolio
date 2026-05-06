@@ -18,61 +18,62 @@ const TIMELINE: TimelineItem[] = [
   {
     period: '2022',
     role: 'Frontend Developer (Intern)',
-    type: 'Foundation',
+    type: 'EmailKit Focus',
     description:
-      'Started my professional journey by building real-world web interfaces and understanding how products are developed in a team environment. Focused on core frontend fundamentals and WordPress basics.',
+      'Started my professional journey by focusing deeply on EmailKit, a WooCommerce and WordPress email customizer. This phase helped me understand real product development, editor-style interfaces, and how frontend work supports actual user workflows.',
     highlights: [
-      'Built responsive UIs using HTML, CSS, and JavaScript',
-      'Learned WordPress ecosystem and plugin fundamentals',
-      'Practiced debugging, Git workflow, and deployment basics',
-      'Explored modern CSS (Flexbox, Grid, responsive systems)',
+      'Focused on EmailKit during my internship period',
+      'Worked on WooCommerce email customizer UI and editing flows',
+      'Learned WordPress plugin structure and product development workflow',
+      'Practiced debugging, Git workflow, responsive UI, and production fixes',
+      'Built a stronger foundation in JavaScript, CSS, and WordPress interfaces',
     ],
-    skills: ['JavaScript', 'React', 'WordPress Basics', 'Git'],
+    skills: ['JavaScript', 'CSS', 'WordPress', 'WooCommerce', 'Git'],
   },
   {
-    period: '2022 - 2023',
+    period: '2023',
     role: 'Junior Frontend Developer',
-    type: 'Product Development',
+    type: 'AI Product Work',
     description:
-      'Worked on production-level WordPress plugins used by thousands of users. Focused on Gutenberg block development, plugin architecture, and improving real user experiences.',
+      'After EmailKit, I moved into GetGenie and worked on AI-focused product interfaces. This phase grew my experience with dashboards, content workflows, and more complex frontend states inside a real SaaS-style product.',
     highlights: [
-      'Contributed to TableKit & ElementsKit (widely used plugins)',
-      'Developed reusable Gutenberg blocks and editor controls',
-      'Worked on WooCommerce-related UI and flows',
-      'Improved UI/UX based on real user needs',
-      'Collaborated with team on feature delivery',
+      'Contributed to GetGenie product development',
+      'Worked on AI content generation and SEO workflow interfaces',
+      'Built and refined responsive dashboard layouts',
+      'Improved usability details across content and productivity flows',
+      'Collaborated with the team on real production releases',
     ],
-    skills: ['Gutenberg', 'WordPress Plugin Dev', 'WooCommerce', 'JavaScript', 'React.js'],
+    skills: ['React', 'JavaScript', 'Dashboard UI', 'SaaS UI', 'WordPress'],
   },
   {
-    period: '2023 - 2024',
+    period: '2024 - Mid 2025',
     role: 'Frontend Engineer',
-    type: 'Growth Phase',
+    type: 'Gutenberg & Elementor Products',
     description:
-      'Leveled up into modern frontend engineering by integrating React and scalable component-based architecture into WordPress products. Took ownership of complex features and UI systems.',
+      'In 2024, I started contributing heavily to GutenKit while also working on ElementsKit from time to time. This is where I grew deeper into Gutenberg block development, reusable controls, and scalable product UI.',
     highlights: [
-      'Worked on GutenKit & PopupKit product features',
-      'Designed reusable and scalable component systems',
-      'Handled complex feature modules independently',
-      'Improved performance and code maintainability',
-      'Introduced better UI patterns and structure',
+      'Started major contribution to GutenKit in 2024',
+      'Contributed to more than 15 Gutenberg blocks',
+      'Worked on 3 or 4 GutenKit product modules',
+      'Contributed to ElementsKit when needed',
+      'Improved reusable controls, editor UI patterns, and frontend maintainability',
     ],
-    skills: ['React.js', 'Performance Optimization', 'Gutenberg', 'WordPress Plugin Dev'],
+    skills: ['Gutenberg', 'React', 'WordPress Plugin Dev', 'Elementor', 'SCSS'],
   },
   {
-    period: '2025 - Present',
+    period: 'Mid 2025 - Present',
     role: 'Frontend Engineer',
-    type: 'Product & SaaS Focus',
+    type: 'TableKit Ownership',
     description:
-      'Operating as a product-focused frontend engineer - contributing beyond coding into UX thinking, product decisions, and business impact. Working on AI-powered SaaS platforms and advanced dashboards.',
+      'From mid-2025 to now, my main focus has been TableKit. I created the product independently and worked across the full frontend experience, from Gutenberg integration to table editing interactions and responsive behavior.',
     highlights: [
-      'Contributed to GetGenie (AI SaaS platform)',
-      'Improved dashboard UX, usability, and user flows',
-      'Built performance-critical and scalable frontend features',
-      'Worked closely with product and design teams',
-      'Participated in feature planning and decision-making',
+      'Created TableKit independently',
+      'Built the native Gutenberg table-building experience',
+      'Developed table controls, editing flows, and responsive behavior',
+      'Worked on data table, post table, and product table use cases',
+      'Took ownership of frontend architecture, UX details, and product polish',
     ],
-    skills: ['React', 'WordPress Plugin Development', 'PHP', 'API Integration', 'Performance'],
+    skills: ['React', 'Gutenberg', 'WordPress Plugin Development', 'JavaScript', 'Product UI'],
     current: true,
   },
   {
@@ -123,16 +124,17 @@ export default function ExperienceSection() {
             }`}
         >
           <div
-            className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500/50 via-cyan-500/30 to-emerald-500/30 hidden sm:block"
+            className="absolute left-5 top-12 bottom-0 w-px bg-gradient-to-b from-blue-500/50 via-cyan-500/30 to-emerald-500/30 hidden sm:block"
             aria-hidden="true"
           />
 
           <div className="space-y-8">
             {TIMELINE.map((item, i) => (
               <div key={`${item.period}-${item.role}`} className="relative flex gap-6 group">
-                <div className="relative shrink-0 w-12 h-12 hidden sm:flex">
+                <div className="relative shrink-0 w-12 h-12 hidden sm:flex z-10">
+                  <div className="absolute inset-0 rounded-xl bg-background" />
                   <div
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center border transition-all duration-200 group-hover:scale-110 ${item.current
+                    className={`relative w-10 h-10 rounded-xl flex items-center justify-center border transition-all duration-200 group-hover:scale-110 ${item.current
                       ? 'bg-blue-500/20 border-blue-500/40 text-blue-400 shadow-lg shadow-blue-500/10'
                       : item.future
                         ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400 shadow-lg shadow-emerald-500/10'
