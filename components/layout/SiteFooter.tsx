@@ -106,7 +106,7 @@ export default function SiteFooter() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground text-center sm:text-left">
-            &copy; {new Date().getFullYear()} Mahmudul Hasan. Crafted with care and precision.
+            &copy; {new Date().getFullYear()} Mahmudul Hasan.
           </p>
           <button
             onClick={scrollTop}

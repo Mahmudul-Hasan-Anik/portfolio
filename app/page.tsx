@@ -6,8 +6,6 @@ import SkillsSection from '@/components/sections/SkillsSection';
 import FeaturedWorkSection from '@/components/sections/FeaturedWorkSection';
 import ExperienceSection from '@/components/sections/ExperienceSection';
 import GitHubProjectsSection from '@/components/sections/GitHubProjectsSection';
-import WhyHireMeSection from '@/components/sections/WhyHireMeSection';
-import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ContactSection from '@/components/sections/ContactSection';
 
 export default function Home() {
@@ -20,8 +18,6 @@ export default function Home() {
       <FeaturedWorkSection />
       <ExperienceSection />
       <GitHubProjectsSection />
-      <WhyHireMeSection />
-      <TestimonialsSection />
       <ContactSection />
       <SiteFooter />
     </main>

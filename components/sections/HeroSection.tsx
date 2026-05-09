@@ -17,13 +17,11 @@ const TECH_BADGES = [
 const STATS = [
   { value: '3+', label: 'Years Experience', icon: <Zap className="w-4 h-4" /> },
   { value: '10+', label: 'Real Products', icon: <Layers className="w-4 h-4" /> },
-  { value: '100%', label: 'Responsive UI', icon: <Globe className="w-4 h-4" /> },
-  { value: 'SaaS', label: 'Product Mindset', icon: <Sparkles className="w-4 h-4" /> },
+  { value: '100%', label: 'Responsive UI', icon: <Globe className="w-4 h-4" /> }
 ];
 
 const TITLES = [
   'Frontend Engineer',
-  'Product Developer',
   'WordPress Specialist',
   'React & Next.js Dev',
 ];
@@ -161,7 +159,7 @@ export default function HeroSection() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {STATS.map((stat) => (
               <div
                 key={stat.label}

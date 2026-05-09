@@ -16,83 +16,24 @@ type TimelineItem = {
 
 const TIMELINE: TimelineItem[] = [
   {
-    period: '2022',
-    role: 'Frontend Developer (Intern)',
-    type: 'EmailKit Focus',
-    description:
-      'Started my professional journey by focusing deeply on EmailKit, a WooCommerce and WordPress email customizer. This phase helped me understand real product development, editor-style interfaces, and how frontend work supports actual user workflows.',
-    highlights: [
-      'Focused on EmailKit during my internship period',
-      'Worked on WooCommerce email customizer UI and editing flows',
-      'Learned WordPress plugin structure and product development workflow',
-      'Practiced debugging, Git workflow, responsive UI, and production fixes',
-      'Built a stronger foundation in JavaScript, CSS, and WordPress interfaces',
-    ],
-    skills: ['JavaScript', 'CSS', 'WordPress', 'WooCommerce', 'Git'],
-  },
-  {
-    period: '2023',
-    role: 'Junior Frontend Developer',
-    type: 'AI Product Work',
-    description:
-      'After EmailKit, I moved into GetGenie and worked on AI-focused product interfaces. This phase grew my experience with dashboards, content workflows, and more complex frontend states inside a real SaaS-style product.',
-    highlights: [
-      'Contributed to GetGenie product development',
-      'Worked on AI content generation and SEO workflow interfaces',
-      'Built and refined responsive dashboard layouts',
-      'Improved usability details across content and productivity flows',
-      'Collaborated with the team on real production releases',
-    ],
-    skills: ['React', 'JavaScript', 'Dashboard UI', 'SaaS UI', 'WordPress'],
-  },
-  {
-    period: '2024 - Mid 2025',
+    period: '2022 - Present',
     role: 'Frontend Engineer',
-    type: 'Gutenberg & Elementor Products',
+    type: 'Product Development',
     description:
-      'In 2024, I started contributing heavily to GutenKit while also working on ElementsKit from time to time. This is where I grew deeper into Gutenberg block development, reusable controls, and scalable product UI.',
+      'Currently working as a Frontend Engineer with 3+ years of hands-on experience building WordPress plugins and modern React-based products. Specialized in Gutenberg block development, dashboard interfaces, and creating scalable frontend architectures for SaaS products.',
     highlights: [
-      'Started major contribution to GutenKit in 2024',
-      'Contributed to more than 15 Gutenberg blocks',
-      'Worked on 3 or 4 GutenKit product modules',
-      'Contributed to ElementsKit when needed',
-      'Improved reusable controls, editor UI patterns, and frontend maintainability',
+      'Developed 15+ Gutenberg blocks with advanced customization options',
+      'Built responsive dashboards and interactive table management systems',
+      'Worked across multiple product modules including TableKit, GutenKit, and ElementsKit',
+      'Implemented complex state management and real-time data handling',
+      'Collaborated with cross-functional teams on product releases and feature improvements',
+      'Consistently delivered production-ready code with focus on performance and UX',
     ],
-    skills: ['Gutenberg', 'React', 'WordPress Plugin Dev', 'Elementor', 'SCSS'],
-  },
-  {
-    period: 'Mid 2025 - Present',
-    role: 'Frontend Engineer',
-    type: 'TableKit Ownership',
-    description:
-      'From mid-2025 to now, my main focus has been TableKit. I created the product independently and worked across the full frontend experience, from Gutenberg integration to table editing interactions and responsive behavior.',
-    highlights: [
-      'Created TableKit independently',
-      'Built the native Gutenberg table-building experience',
-      'Developed table controls, editing flows, and responsive behavior',
-      'Worked on data table, post table, and product table use cases',
-      'Took ownership of frontend architecture, UX details, and product polish',
-    ],
-    skills: ['React', 'Gutenberg', 'WordPress Plugin Development', 'JavaScript', 'Product UI'],
+    skills: ['React', 'Gutenberg', 'JavaScript', 'TypeScript', 'WordPress Plugin Development', 'Tailwind CSS', 'SCSS', 'REST API'],
     current: true,
   },
-  {
-    period: '2026 - Future',
-    role: 'Frontend-Focused Full-Stack Engineer & SaaS Builder',
-    type: 'Vision',
-    description:
-      'Transitioning into full-stack development while building independent SaaS products. Focused on solving real-world business problems in F-commerce and eCommerce using AI-driven solutions.',
-    highlights: [
-      'Build AI Customer Support Agent for F-commerce sellers',
-      'Create all-in-one business tools (chat, inventory, order management)',
-      'Launch profitable SaaS products with real users',
-      'Develop backend skills (Node.js, databases, APIs)',
-      'Work globally or build own startup',
-    ],
-    skills: ['React', 'Node.js', 'Database Management', 'API Development', 'SaaS Product Development'],
-    future: true,
-  },
 ];
+
 
 export default function ExperienceSection() {
   const { ref, inView } = useInView();
@@ -123,28 +64,10 @@ export default function ExperienceSection() {
           className={`relative max-w-3xl mx-auto transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
         >
-          <div
-            className="absolute left-5 top-12 bottom-0 w-px bg-gradient-to-b from-blue-500/50 via-cyan-500/30 to-emerald-500/30 hidden sm:block"
-            aria-hidden="true"
-          />
 
           <div className="space-y-8">
             {TIMELINE.map((item, i) => (
               <div key={`${item.period}-${item.role}`} className="relative flex gap-6 group">
-                <div className="relative shrink-0 w-12 h-12 hidden sm:flex z-10">
-                  <div className="absolute inset-0 rounded-xl bg-background" />
-                  <div
-                    className={`relative w-10 h-10 rounded-xl flex items-center justify-center border transition-all duration-200 group-hover:scale-110 ${item.current
-                      ? 'bg-blue-500/20 border-blue-500/40 text-blue-400 shadow-lg shadow-blue-500/10'
-                      : item.future
-                        ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400 shadow-lg shadow-emerald-500/10'
-                        : 'bg-white/5 border-white/10 text-muted-foreground'
-                      }`}
-                  >
-                    <Briefcase className="w-4 h-4" />
-                  </div>
-                </div>
-
                 <div
                   className={`flex-1 rounded-2xl p-5 sm:p-6 border transition-all duration-200 hover:shadow-xl group-hover:-translate-y-0.5 ${item.current
                     ? 'bg-blue-500/8 border-blue-500/25 hover:bg-blue-500/12'

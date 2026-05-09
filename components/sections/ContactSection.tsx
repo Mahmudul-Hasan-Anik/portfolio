@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useInView } from '@/hooks/useInView';
 import { isSupabaseConfigured, supabase } from '@/lib/supabaseClient';
 import { Send, Mail, MessageCircle, Linkedin, Github, Calendar, CircleCheck as CheckCircle, CircleAlert as AlertCircle, Loader as Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const CONTACT_LINKS = [
   {
@@ -66,25 +67,39 @@ export default function ContactSection() {
     setStatus('loading');
     setErrorMsg('');
 
-    if (!isSupabaseConfigured || !supabase) {
-      setStatus('error');
-      setErrorMsg('Contact form is not configured locally. Please email me directly.');
-      return;
-    }
+    try {
+      // Send email using EmailJS
+      const emailParams = {
+        from_name: form.name.trim(),
+        from_email: form.email.trim(),
+        subject: form.subject.trim() || 'Portfolio Contact Form',
+        message: form.message.trim(),
+        to_email: 'Hasan22dev@gmail.com', // Your Gmail address
+      };
 
-    const { error } = await supabase.from('contact_submissions').insert({
-      name: form.name.trim(),
-      email: form.email.trim(),
-      subject: form.subject.trim(),
-      message: form.message.trim(),
-    });
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        emailParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
 
-    if (error) {
-      setStatus('error');
-      setErrorMsg('Something went wrong. Please try again or email me directly.');
-    } else {
+      // Also save to Supabase if configured (for backup)
+      if (isSupabaseConfigured && supabase) {
+        await supabase.from('contact_submissions').insert({
+          name: form.name.trim(),
+          email: form.email.trim(),
+          subject: form.subject.trim(),
+          message: form.message.trim(),
+        });
+      }
+
       setStatus('success');
       setForm({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('Email send error:', error);
+      setStatus('error');
+      setErrorMsg('Something went wrong. Please try again or email me directly.');
     }
   };
 
@@ -154,9 +169,14 @@ export default function ContactSection() {
               <p className="text-xs text-muted-foreground mb-4 leading-relaxed">
                 Prefer a quick video call? Schedule a 30-minute call to discuss your project or opportunity.
               </p>
-              <button className="w-full py-2.5 rounded-xl bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold transition-all duration-200 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40">
+              <a
+                href="https://meet.google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-2.5 rounded-xl bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold transition-all duration-200 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 text-center block"
+              >
                 Schedule a Call
-              </button>
+              </a>
             </div>
           </div>
 
